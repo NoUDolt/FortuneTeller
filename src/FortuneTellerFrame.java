@@ -12,20 +12,15 @@ public class FortuneTellerFrame extends JFrame {
     private int lastFortuneIndex = -1; // Keeps track of the last fortune shown
 
     public FortuneTellerFrame() {
-        // Frame setup
         setTitle("Fortune Teller");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        // Initialize components
         initTopPanel();
         initMiddlePanel();
         initBottomPanel();
-
-        // Initialize fortunes
         initFortunes();
 
-        // Center frame and set size
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension screenSize = toolkit.getScreenSize();
         setSize((int)(screenSize.width * 0.75), (int)(screenSize.height * 0.75));
@@ -36,10 +31,9 @@ public class FortuneTellerFrame extends JFrame {
         JPanel topPanel = new JPanel();
         topPanel.setLayout(new BorderLayout());
 
-        // Load image and set label
         ImageIcon icon = new ImageIcon("path_to_image/fortune_teller.png"); // Replace with your image path
         titleLabel = new JLabel("Fortune Teller", icon, SwingConstants.CENTER);
-        titleLabel.setFont(new Font("Serif", Font.BOLD, 48));
+        titleLabel.setFont(new Font("Cracked", Font.BOLD, 48));
         titleLabel.setHorizontalTextPosition(SwingConstants.CENTER);
         titleLabel.setVerticalTextPosition(SwingConstants.BOTTOM);
 
@@ -57,17 +51,15 @@ public class FortuneTellerFrame extends JFrame {
     }
 
     private void initBottomPanel() {
-        JPanel bottomPanel = new JPanel();
+        JPanel bottomPanel = new JPanel();*
         bottomPanel.setLayout(new FlowLayout());
 
-        // "Read My Fortune" Button
         readFortuneButton = new JButton("Read My Fortune!");
-        readFortuneButton.setFont(new Font("SansSerif", Font.PLAIN, 24));
+        readFortuneButton.setFont(new Font("Cracked", Font.PLAIN, 24));
         readFortuneButton.addActionListener(this::readFortune);
 
-        // "Quit" Button
         quitButton = new JButton("Quit");
-        quitButton.setFont(new Font("SansSerif", Font.PLAIN, 24));
+        quitButton.setFont(new Font("Cracked", Font.PLAIN, 24));
         quitButton.addActionListener(e -> System.exit(0));
 
         bottomPanel.add(readFortuneButton);
@@ -81,15 +73,15 @@ public class FortuneTellerFrame extends JFrame {
         fortunes.add("You will have a great day!");
         fortunes.add("A surprise is waiting for you around the corner.");
         fortunes.add("Fortune favors the bold.");
-        fortunes.add("You will meet someone interesting today.");
+        fortunes.add("I forgot your fortune...oops");
         fortunes.add("An exciting opportunity is on its way.");
         fortunes.add("Success is in your future.");
-        fortunes.add("A pleasant surprise will make your day.");
+        fortunes.add("Your next roll will be a great fortune!");
         fortunes.add("New adventures await you.");
-        fortunes.add("You will soon embark on a journey.");
+        fortunes.add("You will make a new friend today.");
         fortunes.add("Your hard work will soon pay off.");
-        fortunes.add("You will receive good news.");
-        fortunes.add("Happiness is within your reach.");
+        fortunes.add("Good news will come to you.");
+        fortunes.add("Happiness is within your reach, go get it!.");
     }
 
     private void readFortune(ActionEvent e) {
