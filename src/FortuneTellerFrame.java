@@ -33,7 +33,7 @@ public class FortuneTellerFrame extends JFrame {
 
         ImageIcon icon = new ImageIcon("path_to_image/fortune_teller.png"); // Replace with your image path
         titleLabel = new JLabel("Fortune Teller", icon, SwingConstants.CENTER);
-        titleLabel.setFont(new Font("Cracked", Font.BOLD, 48));
+        titleLabel.setFont(new Font("MS Gothic", Font.BOLD, 48));
         titleLabel.setHorizontalTextPosition(SwingConstants.CENTER);
         titleLabel.setVerticalTextPosition(SwingConstants.BOTTOM);
 
@@ -51,7 +51,7 @@ public class FortuneTellerFrame extends JFrame {
     }
 
     private void initBottomPanel() {
-        JPanel bottomPanel = new JPanel();*
+        JPanel bottomPanel = new JPanel();
         bottomPanel.setLayout(new FlowLayout());
 
         readFortuneButton = new JButton("Read My Fortune!");
